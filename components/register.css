@@ -1,0 +1,84 @@
+.Section_register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+.register{
+    max-width: 500px;
+    width: 100vw;
+    display:flex;
+    border: 1px solid #e9ecef;
+    border-radius: 5px;
+    background-color: white;
+  }
+  
+  #form{
+    max-width: 320px;
+    width: 100vw;
+    margin: 2em auto;
+  }
+  
+  .flex{
+    display: flex;
+    gap: 1em;
+  }
+  
+  .flex-col{
+    flex-direction: column;
+  }
+  
+  .register .col-1{
+    margin: auto;
+    padding: 3em 0;
+    
+  }
+  
+
+  .password{
+    width: 330px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    box-shadow: #6d6d6d 0px 5px 15px;  
+  }
+  
+  .password input{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: hidden;
+    outline: none;
+    font-size: 14px;
+    text-indent: 2px;
+    padding: 5px;  
+  }
+  
+  .password span{
+    cursor: pointer;
+  }
+  .h2-login{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 28px;
+  }
+  .btn{
+    background-color: rgb(24, 119, 242);
+    padding: 8px 15px;
+    width: 330px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .btn:hover{
+    background-color: #0056b3;
+  }
+  

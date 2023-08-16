@@ -2,7 +2,7 @@ import './App.css'
 import { useForm, useFieldArray } from 'react-hook-form';
 import React, { useState } from 'react';
 
-function App() {
+function Form() {
 
   const { register, handleSubmit, control, formState: { errors }, getValues } = useForm();
 
@@ -114,16 +114,6 @@ function App() {
       <div className='CarMileage'>
         <h3>Car Mileage Reimbursement</h3>
         <label>Distance Driven</label>
-        {/* <div className='CarMileage_Wrapper'>
-          <div className='RadioGroup'>
-            <input type='radio' name='distanceUnit' value='km' id='km' />
-            <label htmlFor='km'>km</label>
-          </div>
-          <div className='RadioGroup'>
-            <input type='radio' name='distanceUnit' value='miles' id='miles' />
-            <label htmlFor='miles'>miles</label>
-          </div>
-        </div> */}
         <div className='CarMileage_InputGroup'>
           <input  onChange={calculateTotalReimbursement} type="number" className='Input_CarMillage' placeholder='Car Milage' {...register('carMileage.distance', {required: true})} />
           <div className='suffix'>km</div>
@@ -133,6 +123,7 @@ function App() {
       <div className='TotalReimbursement'>
         <input type="hidden" {...register('totalReimbursement')} />
       </div>
+      
       <button
         className='Button_Count'
         type="button"
@@ -140,10 +131,10 @@ function App() {
       >
         Count reimbursement
       </button>
-      <button type="submit">Submit Claim</button>
+      <button className='btn-submit' type="submit">Submit Claim</button>
     </form>
     </>
   )
 }
 
-export default App
+export default Form

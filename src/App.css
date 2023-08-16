@@ -48,7 +48,7 @@ body{
     height: 34px;
   }
   
-  button {
+  .Button_NewExpense, .Button_Count {
     padding: 8px 15px;
     background-color: #007bff;
     color: #fff;
@@ -56,19 +56,35 @@ body{
     border-radius: 3px;
     cursor: pointer;
   }
-  
-  button:hover {
-    background-color: #0056b3;
+  .Button_Remove{
+    padding: 8px 15px;
+    background-color: #dd0445;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
   }
   
-  button[type="submit"] {
+ .Button_NewExpense:hover, .Button_Count:hover {
+    background-color: #0056b3;
+  }
+  .Button_Remove:hover{
+    background-color: #a80637;
+  }
+  
+  .btn-submit {
     background-color: #28a745;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 3px;
     display: flex;
     margin: auto;
+    cursor: pointer;
     margin-top: 50px;
   }
   
-  button[type="submit"]:hover {
+  .btn-submit:hover {
     background-color: #218838;
   }
   input[type="date"] {
@@ -107,14 +123,6 @@ body{
     align-items: center;
     gap: 10px;
   }
-  /* .RadioGroup {
-    display: flex;
-    align-items: center;
-  }
-  
-  .RadioGroup input[type="radio"] {
-    margin-right: 5px; 
-  } */
   .Expense_Label, .Label_TripEnd{
     margin-top: 15px;
   }

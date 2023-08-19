@@ -15,7 +15,30 @@ body{
     background-color: #f9f9f9;
     font-family: Arial, sans-serif;
   }
-  
+  .Admin_Form{
+    max-width: 500px;
+    margin: 200px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+  }
+  .Admin_Daily_Allowance, .Admin_Car_Mileage{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .Admin_Selector_Wrapper{
+    display: flex;
+    flex-direction: row;
+  }
+  .Admin_Form_LIST{
+    margin-top: 15px;
+  }
+  .Admin_Form_Label{
+    margin-bottom: 10px;
+  }
   .TripDate,
   .TripExpenses,
   .DailyAllowance,
@@ -37,24 +60,17 @@ body{
     outline: none;
   }
   
-  select {
-    width: 100%;
-    padding: 8px;
-    border: none;
-    border-radius: 3px;
-  }
   
-  select {
-    height: 34px;
-  }
-  
-  .Button_NewExpense, .Button_Count {
+  .Button_NewExpense, .Button_Count, .Admin_Form-Edit {
     padding: 8px 15px;
     background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 3px;
     cursor: pointer;
+  }
+  .Admin_Form-Edit{
+    margin-left: 10px;
   }
   .Button_Remove{
     padding: 8px 15px;
@@ -65,14 +81,14 @@ body{
     cursor: pointer;
   }
   
- .Button_NewExpense:hover, .Button_Count:hover {
+ .Button_NewExpense:hover, .Button_Count:hover, .Admin_Form-Edit:hover {
     background-color: #0056b3;
   }
   .Button_Remove:hover{
     background-color: #a80637;
   }
   
-  .btn-submit {
+  .btn-submit, .Admin_Form-submit {
     background-color: #28a745;
     color: #fff;
     padding: 8px 15px;
@@ -84,7 +100,7 @@ body{
     margin-top: 50px;
   }
   
-  .btn-submit:hover {
+  .btn-submit:hover, .Admin_Form-submit:hover {
     background-color: #218838;
   }
   input[type="date"] {
@@ -129,8 +145,9 @@ body{
   .Label_TripStart, .Label_TripEnd{
     font-weight: 700;
   }
-  .Expenses_Selector {
+  .Expenses_Selector, .Admin_Selector {
     width: 100%;
+    padding: 0 3px;
     height: 35px;
     border: 1px solid #7b7b93;
     border-radius: 3px;
@@ -138,6 +155,7 @@ body{
     outline: none;
     transition: border-color 0.3s;
   }
+
   
   .Expenses_Selector:hover,
   .Expenses_Selector:focus {
@@ -188,11 +206,16 @@ body{
     
   }
   .Input_Amount,
-  .Input_DailyAllowance{
+  .Input_DailyAllowance,
+  .input_Admin,
+  .input_receipt{
     border: 1px solid #7b7b93;
     width: 100%;
     padding: 8px;
     border-radius: 3px;
+  }
+  .input_receipt{
+    margin-top: 10px;
   }
   .Input_Description:focus,  
   .Input_Description:hover,
@@ -207,5 +230,6 @@ body{
   .Label_Description{
     margin-top: 7px;
   }
+
   
  

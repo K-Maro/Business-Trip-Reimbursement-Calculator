@@ -2,13 +2,14 @@ import React from 'react';
 import {useState} from 'react'
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
-import './register.css';
+import '/components/register.css';
 import { Icon } from 'react-icons-kit'
 import {eye} from 'react-icons-kit/feather/eye'
 import {eyeOff} from 'react-icons-kit/feather/eyeOff'
-import { setAuthToken } from './setAuthToken';
+import { setAuthToken } from '../setAuthToken';
 import { SHA256 } from 'crypto-js';
 import jwt from 'jwt-decode'
+import { getUserTypeFromToken } from '../getUserTypeFromToken';
 
 export default function Login() {
 
@@ -29,16 +30,6 @@ export default function Login() {
           }
       } else {
           console.log('JWT token not found in localStorage');
-      }
-    }
-    function getUserTypeFromToken(){
-      const token = localStorage.getItem("token");
-      if (token) {
-          const decodedToken = jwt(token);  
-          return decodedToken.sub   
-      } else {
-          console.log('JWT token not found in localStorage');
-          return null
       }
     }
     
@@ -74,7 +65,7 @@ export default function Login() {
               if(userType == 'ADMIN'){
                 window.location.href = '/Admin';
               }else if(userType == 'USER'){
-                window.location.href = '/Form';
+                window.location.href = '/HomePage';
               }
             }
           })

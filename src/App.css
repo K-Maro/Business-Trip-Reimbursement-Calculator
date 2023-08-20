@@ -39,6 +39,29 @@ body{
   .Admin_Form_Label{
     margin-bottom: 10px;
   }
+  
+  .Admin_Receipt_wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Align items to start and end */
+    align-items: center; /* Vertically align items to the center */
+    margin-top: 20px;
+  }
+
+  .Admin_receips_list_wrapper{
+    margin-top: 10px;
+  }
+  .Admin_receips_list_buttons{
+    margin-top: 5px;
+  }
+
+  .edit_receipt {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+  }
+  
   .TripDate,
   .TripExpenses,
   .DailyAllowance,
@@ -113,6 +136,19 @@ body{
   .Button_Remove{
     margin-top: 10px;
   }
+  .button_generate{
+    padding: 3px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .button_generate:hover{
+    background-color: #0056b3;
+  }
   .DailyAllowance_box {
     position: relative;
     display: inline-block;
@@ -146,7 +182,7 @@ body{
     font-weight: 700;
   }
   .Expenses_Selector, .Admin_Selector {
-    width: 100%;
+    width: 400px;
     padding: 0 3px;
     height: 35px;
     border: 1px solid #7b7b93;
@@ -205,12 +241,20 @@ body{
     margin-left: 10px;
     
   }
+  .Limits_Container{
+    display: flex;
+    flex-direction: row;
+  }
   .Input_Amount,
   .Input_DailyAllowance,
   .input_Admin,
-  .input_receipt{
+  .input_receipt,
+  .input_Total_Reimbursement,
+  .input_Distance,
+  .input_Days,
+  .Admin__Input_receips_list{
     border: 1px solid #7b7b93;
-    width: 100%;
+    width: 400px;
     padding: 8px;
     border-radius: 3px;
   }
